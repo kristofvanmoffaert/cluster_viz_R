@@ -67,7 +67,7 @@ ellipse_MDS <- function(datas, predictions, centroids=NULL) {
       
       min_mean = min(means)
       max_mean = max(means)
-      norm_mean = 1 - ((means[cl] - min_mean) / (max_mean - min_mean))
+      norm_mean = ((means[cl] - min_mean) / (max_mean - min_mean))
       # normalize and store mean data
       mean_data[cl, feature_i] =  norm_mean
     }
